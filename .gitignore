@@ -1,0 +1,10 @@
+/env
+*.csv
+!results/*.csv
+*.png
+!results/*.png
+*.pkl
+!results/*.pkl
+*.ipynb
+/out
+/data
