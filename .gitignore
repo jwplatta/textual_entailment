@@ -8,3 +8,5 @@
 *.ipynb
 /out
 /data
+*.zip
+/results
