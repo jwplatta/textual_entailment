@@ -11,14 +11,14 @@ class TextualEntailmentPrompter:
 
     def predict(self, premise: str, hypothesis: str):
         prompt = f"""
-        Does the premise entail, contradict, or have no relationship to the\
-          hypothesis? Label the sentence pair as contradiction, entailment, or neutral.
+        Does the premise entail, contradict, or have no relationship to the hypothesis? Label the sentence pair as contradiction, entailment, or neutral.
         ###
         premise: {premise}
         hypothesis: {hypothesis}
         ###
         Label:
         """
+
         openai.api_key = self.openai_api_key
         response = openai.Completion.create(
             engine=self.engine,
