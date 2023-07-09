@@ -80,7 +80,7 @@ class NeuralNetworkClassifier(BaseEstimator, ClassifierMixin):
             batch_losses = []
 
             for _, (X_batch, y_batch) in enumerate(dataloader):
-                loss = self.__backprop(X_batch, y_batch)
+                loss = self._backprop(X_batch, y_batch)
 
                 batch_losses.append(loss)
 
@@ -103,6 +103,8 @@ class NeuralNetworkClassifier(BaseEstimator, ClassifierMixin):
         Args:
             X: A pytorch tensor.
         """
+        self.model.eval()
+
         with torch.no_grad():
             X = X.to(self.device)
             logits = self.model(X)
@@ -115,7 +117,7 @@ class NeuralNetworkClassifier(BaseEstimator, ClassifierMixin):
                 return predicted.cpu().numpy()
 
 
-    def __backprop(self, X_batch, y_batch):
+    def _backprop(self, X_batch, y_batch):
         self.optimizer.zero_grad()
 
         logits = self.model(X_batch)
