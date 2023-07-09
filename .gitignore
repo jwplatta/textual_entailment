@@ -1,6 +1,5 @@
 /env
 *.csv
-!results/*.csv
 *.png
 !results/*.png
 *.pkl
@@ -9,4 +8,3 @@
 /out
 /data
 *.zip
-/results

@@ -1,0 +1,34 @@
+Naive Bayes
+               precision    recall  f1-score   support
+
+contradiction       0.51      0.46      0.48      3237
+   entailment       0.48      0.58      0.52      3368
+      neutral       0.52      0.46      0.49      3219
+
+     accuracy                           0.50      9824
+    macro avg       0.50      0.50      0.50      9824
+ weighted avg       0.50      0.50      0.50      9824
+
+
+Neural Network
+               precision    recall  f1-score   support
+
+contradiction       0.75      0.72      0.74      3237
+   entailment       0.69      0.83      0.76      3368
+      neutral       0.73      0.60      0.66      3219
+
+     accuracy                           0.72      9824
+    macro avg       0.73      0.72      0.72      9824
+ weighted avg       0.73      0.72      0.72      9824
+
+
+Davinci
+               precision    recall  f1-score   support
+
+contradiction       0.90      0.42      0.57      3237
+   entailment       0.60      0.84      0.70      3368
+      neutral       0.35      0.39      0.37      3219
+
+     accuracy                           0.55      9824
+    macro avg       0.62      0.55      0.55      9824
+ weighted avg       0.62      0.55      0.55      9824
