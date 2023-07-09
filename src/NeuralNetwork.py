@@ -12,6 +12,8 @@ class NeuralNetwork(nn.Module):
             out_features
           ),
           nn.ReLU(),
+          nn.Linear(out_features, out_features),
+          nn.ReLU(),
           nn.Linear(out_features, n_classes)
         ]
 
