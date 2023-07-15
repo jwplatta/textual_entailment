@@ -187,7 +187,7 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    if args.mode == "eval" and args.model == "text-davinci-002":
+    if args.mode == "evaluate" and args.model == "text-davinci-002":
         texts = load_texts(args.data_dir, args.dataset)
         timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         result_path = f"{args.model}_results_{timestamp}.json"
@@ -298,7 +298,7 @@ if __name__ == "__main__":
 
         out_path = save_model(nn_clf, args.model, args.data_dir)
         print(f'Saved model to {out_path}.')
-    elif args.mode == "eval" and args.model == "nn":
+    elif args.mode == "evaluate" and args.model == "nn":
         X_test = load_embeddings(args.data_dir, args.dataset)
         if X_test.numel() == 0:
             print(f"No embeddings for {args.dataset} found in {args.data_dir}.")
@@ -322,7 +322,7 @@ if __name__ == "__main__":
 
         results_path = save_results(args.model, args.dataset, y_test, y_pred)
         print(f"Saved results to {results_path}.")
-    elif args.mode == "eval" and args.model in ['ada', 'nbayes']:
+    elif args.mode == "evaluate" and args.model in ['ada', 'nbayes']:
         texts = load_texts(args.data_dir, args.dataset)
         if texts.empty:
             print(f"No sentence pairs for {args.dataset} found in {args.data_dir}.")
