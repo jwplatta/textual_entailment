@@ -63,8 +63,8 @@ class NeuralNetworkClassifier(BaseEstimator, ClassifierMixin):
     def fit(self, X, y):
         """
         Args:
-            X: A pytorch tensor.
-            y: A pytorch tensor.
+            X (torch.Tensor): features set
+            y (torch.Tensor): target label
         """
         X = X.to(self.device)
         y = y.to(self.device)

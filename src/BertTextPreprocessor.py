@@ -13,7 +13,7 @@ class BertTextPreprocessor:
     def transform(self, X):
         """
         Args:
-            X: A pandas dataframe with columns 'sentence1' and 'sentence2'.
+            X (pandas.DataFrame): Dataframe with columns 'sentence1' and 'sentence2'.
         """
         # NOTE: add special tokens
         X['sentence1'] = self.tokenizer.cls_token + \

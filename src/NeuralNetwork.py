@@ -23,5 +23,8 @@ class NeuralNetwork(nn.Module):
     def forward(self, x):
         """
         Forward pass of the neural network.
+
+        Args:
+            x (torch.Tensor): input tensor
         """
         return self.network(x)
