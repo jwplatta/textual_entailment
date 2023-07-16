@@ -7,7 +7,7 @@ This project is a short exploration of textual entailment based on my projects a
 2. A neural network using embeddings generatd with BERT.
 3. OpenAI's text-davinci-002 model using prompt design.
 
-A complete write up of the results is [here]().
+A complete write up of the results is [here](https://jwplatta.github.io/machine-learning/nlp/2023/07/15/exploring-textual-entailment.html).
 
 ## Example Usage
 
